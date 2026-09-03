@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fff9ef;
+  --color-sky: #bfe3ff;
+  --color-sky-deep: #7cc4f5;
+  --color-candy: #ffc2d9;
+  --color-candy-deep: #ff96bf;
+  --color-sunny: #ffe9a8;
+  --color-sunny-deep: #ffd35c;
+  --color-mint: #c8f5d8;
+  --color-mint-deep: #79de9b;
+  --color-lilac: #e3d5ff;
+  --color-lilac-deep: #b79cf5;
+  --color-choco: #8b5a2b;
+  --color-ink: #4a3b2a;
+
+  --font-display: var(--font-fredoka), "Fredoka", ui-rounded, sans-serif;
+  --font-body: var(--font-baloo), "Baloo 2", ui-rounded, sans-serif;
+
+  --animate-wiggle: wiggle 0.35s ease-in-out;
+  --animate-floaty: floaty 4s ease-in-out infinite;
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+}
+
+body {
+  @apply bg-cream text-ink font-body;
+}
+
+.bg-activity-sky { background-color: var(--color-sky); }
+.bg-activity-candy { background-color: var(--color-candy); }
+.bg-activity-mint { background-color: var(--color-mint); }
+.bg-activity-sunny { background-color: var(--color-sunny); }
+.bg-activity-lilac { background-color: var(--color-lilac); }
+
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(139, 90, 43, 0.16) 2px, transparent 2px);
+  background-size: 22px 22px;
+}
